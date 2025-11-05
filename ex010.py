@@ -14,3 +14,9 @@ vendas = {
 } 
 
 
+for categoria, itens in vendas.items():
+    total = 0
+    for item in itens:
+        total += item["quantidade"] * item["valor_unitario"]
+
+    print(f'- {categoria}: R$ {total:.2f}')
